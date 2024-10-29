@@ -21,11 +21,13 @@ You'll need a login with email and eventually you'll get to the version and "I a
     VMware-Fusion-13.6.1-24319021_universal.dmg
     md5sum: 13304cbc30a0849a34cf1f7ea4065978
 
-# If brew then
+# Hasicorp Vagrant
+
+## If using brew then
 
 This might be easiest for arch and upgrade handling.
 
-## install brew
+### install brew
 
 Use this 
 
@@ -35,7 +37,7 @@ to check that this install command hasn't changed:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-## install vagrant
+### install vagrant
 
     brew tap hashicorp/tap
     brew install hashicorp/tap/hashicorp-vagrant
@@ -43,7 +45,7 @@ to check that this install command hasn't changed:
 The vagrant-vmware-utility install brew instructions look the same as those 
 above.
 
-# Else packages
+## Else packages
 
 Use these
 
@@ -52,21 +54,21 @@ Use these
 
 to check the binary versions that 
 
-## arch AMD64
+### arch AMD64
 
     curl -kOLJ https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_darwin_amd64.dmg
     curl -kOLJ https://releases.hashicorp.com/vagrant-vmware-utility/1.0.23/vagrant-vmware-utility_1.0.23_darwin_amd64.dmg
 
-## arch ARM
+### arch ARM
 
     curl -kOLJ https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_darwin_arm64.dmg
     curl -kOLJ https://releases.hashicorp.com/vagrant-vmware-utility/1.0.23/vagrant-vmware-utility_1.0.23_darwin_arm64.dmg
 
-# Vagrant bento boxes
+# Vagrant Boxes
 
 Again, at the time of this note generation, ubuntu 24.04 was the latest well supported box, from the bento project builds.
 
-If you can't find a box built by the distro, Chef bento boxes are the next best thing (and sometimes even better for functional completeness).
+If you can't find a box built by the distro, Chef project bento boxes are the next best thing (and sometimes even better for functional completeness).
 
 ## Ubuntu
 
