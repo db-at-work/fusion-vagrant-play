@@ -6,11 +6,13 @@ Notes: for starting multiple VMs using vagrant to launch vmware fusion on apple 
 
 ## Why this solution
 
-Because: Although virtualbox finally supports apple silicon with the [7.1.x series](https://www.virtualbox.org/wiki/Downloads) of releases in late 2024, Vagrant 2.4.1 has a virtualbox version check that does not support higher than 7.0.x series. So we suffer the version leap-frog of dysfunction, or use vmware.
+Originally, none of this was true:
+
+Virtualbox finally supports apple silicon with the [7.1.x series](https://www.virtualbox.org/wiki/Downloads) of releases in late 2024, and Vagrant 2.4.3 has a virtualbox version check that supports the 7.1.x series.
 
 # VMware Fusion Pro
 
-This is now [available](https://blogs.vmware.com/teamfusion/2024/05/fusion-pro-now-available-free-for-personal-use.html) for non-commercial use w/o a license.
+This is [available](https://blogs.vmware.com/teamfusion/2024/05/fusion-pro-now-available-free-for-personal-use.html) for non-commercial use w/o a license.
 
 Go here for the download
 
@@ -42,8 +44,7 @@ to check that this install command hasn't changed:
     brew tap hashicorp/tap
     brew install hashicorp/tap/hashicorp-vagrant
 
-The vagrant-vmware-utility install brew instructions look the same as those 
-above.
+The vagrant-vmware-utility install brew instructions look the same as those above, so maybe the one command is all we need for both.
 
 ## Else packages
 
@@ -56,12 +57,12 @@ to check the binary versions that
 
 ### arch AMD64
 
-    curl -kOLJ https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_darwin_amd64.dmg
+    curl -kOLJ https://releases.hashicorp.com/vagrant/2.4.3/vagrant_2.4.3_darwin_amd64.dmg
     curl -kOLJ https://releases.hashicorp.com/vagrant-vmware-utility/1.0.23/vagrant-vmware-utility_1.0.23_darwin_amd64.dmg
 
 ### arch ARM
 
-    curl -kOLJ https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_darwin_arm64.dmg
+    curl -kOLJ https://releases.hashicorp.com/vagrant/2.4.3/vagrant_2.4.3_darwin_arm64.dmg
     curl -kOLJ https://releases.hashicorp.com/vagrant-vmware-utility/1.0.23/vagrant-vmware-utility_1.0.23_darwin_arm64.dmg
 
 # Vagrant Boxes
